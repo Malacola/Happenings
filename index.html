@@ -32,7 +32,13 @@
 
 	<script id="popupTemplate" type="text/template">
 	<div id="instagram-photo">
-		<img src=<%= photo.images.thumbnail.url %>></div>
+		<img src=<%= photo.images.thumbnail.url %>>
+	</div>
+	<p id="instagram-caption"> 
+		<% if(photo.caption) { %>
+			<%=	photo.caption.text  %>
+		<% } %>
+	</p>
 	</script>
 
  	<script src="javascripts/leaflet4/dist/leaflet.js"></script>
